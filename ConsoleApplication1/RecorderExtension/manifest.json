@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+
+  "name": "Page Object Recorder",
+  "description": "JP Page Object Recorder",
+  "version": "1.0",
+
+  "background": { "scripts": ["jquery-2.0.0.js", "json2.js", "background.js"] },
+
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js" : ["jquery-2.0.0.js", "json2.js", "content.js"],
+      "all_frames": true
+    }
+  ],
+
+  "permissions": ["tabs", "*://*/*"],
+
+  "browser_action": {
+    "default_icon": "autobot_start.png",
+    "default_title": "Start Recording"
+  }
+}
