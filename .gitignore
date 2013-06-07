@@ -1,0 +1,7 @@
+*.suo
+
+Thumbs.db
+
+/bin
+/debug
+/output
